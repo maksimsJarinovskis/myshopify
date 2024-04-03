@@ -4,9 +4,81 @@
       "type": "task3",
       "settings": {
       }
+    },
+    "image_banner_qDDz4t": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pBUMea": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_63k6Lx": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pBUMea",
+        "text_63k6Lx"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_banner_TwQ4Ay": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jMnUnp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner2",
+            "heading_size": "h1"
+          }
+        },
+        "text_y8x6T8": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jMnUnp",
+        "text_y8x6T8"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_qDDz4t",
+    "image_banner_TwQ4Ay"
   ]
 }
