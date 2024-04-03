@@ -88,7 +88,20 @@
           %}
         </li>
       {%- endif -%}
-      {%- for media in product.media -%}
+      {% for i in (0..product.media.size) %}
+        {% if product.images.size > 1 %}
+          {% if i == 0 %}
+            {%- assign media = product.media[1] -%}
+          {%  endif %}
+          {% if i == 1 %}
+            {%- assign media = product.media[0] -%}
+          {%  endif %}
+          {% if i > 1 %}
+            {%- assign media = product.media[i] -%}
+          {%  endif %}
+        {% else %}
+          {%- assign media = product.media[i] -%}
+        {% endif %}
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
           <li
             id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
