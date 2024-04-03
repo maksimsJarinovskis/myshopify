@@ -1,67 +1,6 @@
-{% section 'header' %}
-<!-- Include the header section -->
-
-<div class="banner-container">
-    <!-- First banner -->
-    <div class="banner">
-        <img src="banner1.jpg" alt="Banner 1">
-    </div>
-
-    <!-- Second banner -->
-    <div class="banner">
-        <img src="banner2.jpg" alt="Banner 2">
-    </div>
-</div>
-
 <div id="product-container">
     <!-- Product details will be loaded here -->
+    hello
 </div>
 
-<script>
-    // Function to handle adding product to cart
-    function addToCart(productId) {
-        $.ajax({
-            type: 'POST',
-            url: '/cart/add.js',
-            data: {
-                quantity: 1,
-                id: productId
-            },
-            dataType: 'json',
-            success: function() {
-                // Update mini cart
-                Shopify.getCart();
-            }
-        });
-    }
-
-    // Function to load a random product
-    function loadRandomProduct() {
-        $.ajax({
-            type: 'GET',
-            url: '/products.json',
-            dataType: 'json',
-            success: function(products) {
-                // Get a random product from the list
-                var randomIndex = Math.floor(Math.random() * products.length);
-                var randomProduct = products[randomIndex];
-                var productId = randomProduct.id;
-                var productName = randomProduct.title;
-                var productPrice = randomProduct.variants[0].price;
-
-                // Display product details
-                var productHtml = `
-          <h2>${productName}</h2>
-          <p>$${productPrice}</p>
-          <button onclick="addToCart(${productId})">Add to Cart</button>
-        `;
-                $('#product-container').html(productHtml);
-            }
-        });
-    }
-
-    // Load a random product when the page loads
-    $(document).ready(function() {
-        loadRandomProduct();
-    });
-</script>
+<script src="../assets/task3.js"></script>
