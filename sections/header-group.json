@@ -32,7 +32,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header {display: flex; flex-direction: row-reverse;}",
+        "\/*1st task*\/.header {display: flex; flex-direction: row-reverse;}",
         ".header__heading {align-self: start;}",
         ".header__icons {margin-right: auto; margin-left: 0;}"
       ],
