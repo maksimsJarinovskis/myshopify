@@ -1,41 +1,5 @@
 {
   "sections": {
-    "image_banner_MYwNEW": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_iDR8jw": {
-          "type": "heading",
-          "settings": {
-            "heading": "BANNER",
-            "heading_size": "h1"
-          }
-        },
-        "text_Q4fWKg": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_iDR8jw",
-        "text_Q4fWKg"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/2ba2541e-b3a4-4499-8c21-80ca9799aaac_1.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -76,6 +40,42 @@
         "show_text_below": false
       }
     },
+    "image_banner_MYwNEW": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_iDR8jw": {
+          "type": "heading",
+          "settings": {
+            "heading": "BANNER",
+            "heading_size": "h1"
+          }
+        },
+        "text_Q4fWKg": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iDR8jw",
+        "text_Q4fWKg"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2ba2541e-b3a4-4499-8c21-80ca9799aaac_1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -106,8 +106,8 @@
     }
   },
   "order": [
-    "image_banner_MYwNEW",
     "image_banner",
+    "image_banner_MYwNEW",
     "featured_collection"
   ]
 }
