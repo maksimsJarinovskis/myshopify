@@ -2,5 +2,13 @@
     <!-- Product details will be loaded here -->
     hello
 </div>
+<form id="registration-form">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <button type="submit">Register</button>
+</form>
 
 <script src="{{ 'task3.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'registration.js' | asset_url }}" defer="defer" type="module"></script>
