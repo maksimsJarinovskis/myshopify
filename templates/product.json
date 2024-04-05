@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "task6_product_name_input_eRPVhp": {
+          "type": "shopify:\/\/apps\/task6\/blocks\/product-name-input\/b1c005a7-1fb8-4f61-9401-e8555bd62aea",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -54,6 +59,7 @@
       "block_order": [
         "vendor",
         "title",
+        "task6_product_name_input_eRPVhp",
         "price",
         "variant_picker",
         "quantity_selector",
