@@ -1,0 +1,148 @@
+<div class="task8" >
+    {% if section.settings.hero_image != blank and section.settings.hero_video == blank %}
+        <img class="banner" src="{{ section.settings.hero_image | image_url: width: 500 }}">
+    {% endif %}
+    {% if section.settings.hero_video != blank %}
+      <iframe class="banner" width="100%" height="100%"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    {% endif %}
+    {% if section.settings.dark_overlay %}
+        <div class="overlay" style="background: #000; opacity: {{ section.settings.overlay_opacity }}%">HELLO</div>
+    {% endif %}
+    <div class="container" style="background: {{ section.settings.body_color }}; opacity: {{ section.settings.body_opacity }}%" >
+        <div class="headings">
+            {% if section.settings.section-heading != blank %}
+                <h2 style="color: {{ section.settings.text_color }}" class="section-heading">{{ section.settings.section-heading }}</h2>
+            {% endif %}
+            <span> | </span>
+            {% if section.settings.section-large-heading != blank %}
+                <h2 style="color: {{ section.settings.text_color }}" class="section-large-heading">{{ section.settings.section-large-heading }}</h2>
+            {% endif %}
+        </div>
+
+        {% if section.settings.description != blank %}
+            <p style="color: {{ section.settings.text_color }}" class="description">{{ section.settings.description }}</p>
+        {% endif %}
+        <div class="ctas">
+            {% if section.settings.view-btn != blank %}
+                <button class="view-btn">
+                    <a href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+                </button>
+            {% endif %}
+            {% if section.settings.view-btn1 != blank %}
+                <button class="view-btn">
+                    <a href="{{ section.settings.view-btn-link1 }}">{{ section.settings.view-btn1 }}</a>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script>
+    console.log('hello', "{{ section.settings.dark_overlay }}");
+    const iframe = document.querySelector("iframe.banner");
+    if (iframe) {
+      const url = new URL("{{ section.settings.hero_video }}");
+      const id = url.searchParams.get("v");
+      const attributeUrl = `https://www.youtube.com/embed/${id}?&autoplay=1&mute=1&controls=0`
+      iframe.setAttribute("src", attributeUrl);
+
+    }
+</script>
+{{ 'task8.css' | asset_url | stylesheet_tag }}
+{% schema %}
+{
+  "name":"Welcome",
+  "settings":[
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "Body Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "body_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Body background opacity",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "body_text",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "id":"section-heading",
+      "type":"text",
+      "label":"Heading 1"
+    },
+    {
+      "id":"section-large-heading",
+      "type":"text",
+      "label":"Heading 2"
+    },
+    {
+      "id":"dark_overlay",
+      "type":"checkbox",
+      "label":"Do you need dark overlay over banner?"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Overlay opacity opacity",
+      "default": 30
+    },
+    {
+      "type":"image_picker",
+      "id":"hero_image",
+      "label":"Choose Hero Image"
+    },
+    {
+      "type": "video_url",
+      "id": "hero_video",
+      "label": "Product description video",
+      "accept": [
+        "youtube"
+      ]
+    },
+    {
+      "id":"description",
+      "type":"textarea",
+      "label":"Description"
+    },
+    {
+      "id":"view-btn-link",
+      "type":"url",
+      "label":"CTA Button URL(to hide button, simply leave this field empty)"
+    },
+    {
+      "id":"view-btn",
+      "type":"text",
+      "label":"Button text"
+    },
+    {
+      "id":"view-btn-link1",
+      "type":"url",
+      "label":"CTA Button URL(to hide button, simply leave this field empty)"
+    },
+    {
+      "id":"view-btn1",
+      "type":"text",
+      "label":"Button text"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Welcome section Test",
+      "category":"ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
